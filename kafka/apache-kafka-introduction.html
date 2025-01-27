@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="An introduction to Apache Kafka on HDInsight - Azure" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/azure/hdinsight/kafka/apache-kafka-introduction" />
+			<meta property="og:description" content="Learn about Apache Kafka on HDInsight: What it is, what it does, and where to find examples and getting started information." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="author" content="JasonWHowell" />
+<meta name="breadcrumb_path" content="/azure/bread/toc.json" />
+<meta name="depot_name" content="Azure.azure-documents" />
+<meta name="description" content="Learn about Apache Kafka on HDInsight: What it is, what it does, and where to find examples and getting started information." />
+<meta name="document_id" content="f0edc8be-5f9c-4146-17a3-08f88d3bcd48" />
+<meta name="document_version_independent_id" content="3d390731-26cf-3a8e-a11c-e73a3efccf4e" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/02bf6af8e936dfaf38e20150fc5102e81a3b0555/articles/hdinsight/kafka/apache-kafka-introduction.md" />
+<meta name="learn_banner_products" content="azure" />
+<meta name="locale" content="en-us" />
+<meta name="ms.author" content="jasonh" />
+<meta name="ms.custom" content="hdinsightactive" />
+<meta name="ms.date" content="02/25/2020" />
+<meta name="ms.service" content="hdinsight" />
+<meta name="ms.topic" content="overview" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/hdinsight/kafka/apache-kafka-introduction.md" />
+<meta name="recommendations" content="true" />
+<meta name="schema" content="Conceptual" />
+<meta name="search.ms_docsetname" content="azure-documents" />
+<meta name="search.ms_product" content="Azure" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="uhfHeaderId" content="azure" />
+<meta name="updated_at" content="2021-03-23 11:04 AM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/Azure.azure-documents/{branchName}{pdfName}" />
+<meta name="word_count" content="831" />
+
+
+	<meta name="scope" content="Azure, Azure HDInsight" />
+<link href="https://docs.microsoft.com/en-us/azure/hdinsight/kafka/apache-kafka-introduction" rel="canonical">
+	<title>An introduction to Apache Kafka on HDInsight - Azure | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/e6141ec8.site-ltr.css ">
+
+	
+
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: 'azure',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/azure-docs',
+			feedbackProductUrl: 'https://feedback.azure.com/forums/217335-hdinsight',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/hdinsight/kafka/apache-kafka-introduction.md',
+			extendBreadcrumb: false,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "JasonWHowell", url: "https://github.com/JasonWHowell" },
+						{ name: "hsrasheed", url: "https://github.com/hsrasheed" },
+						{ name: "mamccrea", url: "https://github.com/mamccrea" },
+						{ name: "dagiro", url: "https://github.com/dagiro" },
+						{ name: "anushreeringne", url: "https://github.com/anushreeringne" },
+						{ name: "msebolt", url: "https://github.com/msebolt" },
+						{ name: "hrasheed-msft", url: "https://github.com/hrasheed-msft" },
+						{ name: "Blackmist", url: "https://github.com/Blackmist" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+	<script>window.onedsAwa = window.awa; delete window.awa;</script>	
+	<script src="/static/third-party/jsll/4.3.4/jsll-4.js"></script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2c6911d0.index-polyfills.js"></script>
+
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/6cc9edb8.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Skip to main content</a>
+		
+		<div hidden id="cookie-consent-holder"></div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar border-top is-hidden-mobile"></div>
+</header>		</div>
+
+						<div class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+					<nav class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop flex-grow-1" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+						<ul id="page-breadcrumbs" class="breadcrumbs">
+						</ul>
+					</nav>
+				<div class="content-header-controls">
+					<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">Contents</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Exit focus mode</span>
+					</button>
+				</div>
+				<div class="has-padding-none-tablet padding-xs font-size-s display-flex justify-content-space-between flex-grow-1 page-action-holder">
+					<ul class="is-hidden-mobile action-list justify-content-flex-start has-flex-justify-content-end-tablet display-flex flex-wrap-wrap flex-grow-1 is-unstyled">
+						<li hidden>
+							<a id="lang-link" class="button is-text has-inner-focus is-small is-icon-only-touch" title="Read in English" data-bi-name="language-toggle">
+								<span id="lang-link-icon" class="icon docon docon-locale-globe" aria-hidden="true"></span>
+								<span id="lang-link-text" class="is-visually-hidden-touch is-hidden-portrait"></span>
+							</a>
+						</li>
+						<li>
+							<button type="button" class="collection button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="collection" data-bi-name="collection" title="Add to collection">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-circle-addition has-text-primary"></span>
+								</span>
+								<span class="collection-status is-visually-hidden-touch is-hidden-portrait">Save</span>
+							</button>
+						</li>
+							<li id="feedback-section-link">
+								<a href="#feedback" class="button is-text has-inner-focus is-small is-icon-only-touch" data-bi-name="comments" title="Send feedback about this page">
+									<span class="icon" aria-hidden="true">
+										<span class="docon docon-comment-lines"></span>
+									</span>
+									<span class="is-visually-hidden-touch is-hidden-portrait">Feedback</span>
+								</a>
+							</li>
+								<li id="contenteditbtn">
+									<a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/hdinsight/kafka/apache-kafka-introduction.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/hdinsight/kafka/apache-kafka-introduction.md" data-original_content_git_url_template="{repo}/blob/{branch}/articles/hdinsight/kafka/apache-kafka-introduction.md" data-pr_repo="" data-pr_branch="">
+									<span class="icon" aria-hidden="true">
+										<span class="docon docon-edit-outline"></span>
+									</span>
+									<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+								</a>
+							</li>
+						<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>						</li>
+					</ul>
+					<button type="button" class="border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+						<span class="icon">
+							<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+						</span>
+						<span class="contents-expand-title">Table of contents</span>
+					</button>
+					<div class="is-invisible"></div>
+					<div class="is-hidden-tablet level-item is-flexible level-right">
+						<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+							<span class="icon">
+								<span class="docon docon-more-vertical" aria-hidden="true"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="position-fixed display-flex flex-direction-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+						<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+							<h1 id="what-is-apache-kafka-in-azure-hdinsight">What is Apache Kafka in Azure HDInsight</h1>
+
+								<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+									<li>
+										<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2020-02-25T00:00:00.000Z" data-article-date-source="ms.date">02/25/2020</time>
+									</li>
+											<li class="readingTime">4 minutes to read</li>
+										<li class="contributors-holder">
+											<ul class="facepile has-margin-left-none is-small" data-bi-name="contributors">
+																<li class="facepile-item">
+																	<a href="https://github.com/JasonWHowell" title="JasonWHowell" aria-label="JasonWHowellGithub profile" data-src="https://github.com/JasonWHowell.png?size=32" data-contributor-name="JasonWHowell" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/JasonWHowell.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-teal"aria-hidden="true">J</span>
+																	</a>
+																</li>
+																<li class="facepile-item">
+																	<a href="https://github.com/hsrasheed" title="hsrasheed" aria-label="hsrasheedGithub profile" data-src="https://github.com/hsrasheed.png?size=32" data-contributor-name="hsrasheed" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/hsrasheed.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-red"aria-hidden="true">h</span>
+																	</a>
+																</li>
+																<li class="facepile-item">
+																	<a href="https://github.com/mamccrea" title="mamccrea" aria-label="mamccreaGithub profile" data-src="https://github.com/mamccrea.png?size=32" data-contributor-name="mamccrea" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/mamccrea.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-blue"aria-hidden="true">m</span>
+																	</a>
+																</li>
+																<li class="facepile-item">
+																	<a href="https://github.com/dagiro" title="dagiro" aria-label="dagiroGithub profile" data-src="https://github.com/dagiro.png?size=32" data-contributor-name="dagiro" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/dagiro.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-teal"aria-hidden="true">d</span>
+																	</a>
+																</li>
+																<li class="facepile-item">
+																	<a href="https://github.com/anushreeringne" title="anushreeringne" aria-label="anushreeringneGithub profile" data-src="https://github.com/anushreeringne.png?size=32" data-contributor-name="anushreeringne" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/anushreeringne.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-red"aria-hidden="true">a</span>
+																	</a>
+																</li>
+													<li class="facepile-item">
+															<button aria-label="View all contributors" class="facepile-item-more" title="View all contributors">
+																<div class="facepile-item-coin" aria-hidden="true">
+																	<span class="facepile-item-coin-text" aria-hidden="true">
+																		+3
+																	</span>
+																</div>
+															</button>
+													</li>
+											</ul>
+										</li>
+								</ul>
+
+								<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+									<h3>In this article</h3>
+								</nav>
+
+
+							<!-- <content> -->
+								<p><a href="https://kafka.apache.org" data-linktype="external">Apache Kafka</a> is an open-source distributed streaming platform that can be used to build real-time streaming data pipelines and applications. Kafka also provides message broker functionality similar to a message queue, where you can publish and subscribe to named data streams.</p>
+<p>The following are specific characteristics of Kafka on HDInsight:</p>
+<ul>
+<li><p>It's a managed service that provides a simplified configuration process. The result is a configuration that is tested and supported by Microsoft.</p>
+</li>
+<li><p>Microsoft provides a 99.9% Service Level Agreement (SLA) on Kafka uptime. For more information, see the <a href="https://azure.microsoft.com/support/legal/sla/hdinsight/v1_0/" data-linktype="external">SLA information for HDInsight</a> document.</p>
+</li>
+<li><p>It uses Azure Managed Disks as the backing store for Kafka. Managed Disks can provide up to 16 TB of storage per Kafka broker. For information on configuring managed disks with Kafka on HDInsight, see <a href="apache-kafka-scalability" data-linktype="relative-path">Increase scalability of Apache Kafka on HDInsight</a>.</p>
+<p>For more information on managed disks, see <a href="../../virtual-machines/managed-disks-overview" data-linktype="relative-path">Azure Managed Disks</a>.</p>
+</li>
+<li><p>Kafka was designed with a single dimensional view of a rack. Azure separates a rack into two dimensions - Update Domains (UD) and Fault Domains (FD). Microsoft provides tools that rebalance Kafka partitions and replicas across UDs and FDs.</p>
+<p>For more information, see <a href="apache-kafka-high-availability" data-linktype="relative-path">High availability with Apache Kafka on HDInsight</a>.</p>
+</li>
+<li><p>HDInsight allows you to change the number of worker nodes (which host the Kafka-broker) after cluster creation. Upward scaling can be performed from the Azure portal, Azure PowerShell, and other Azure management interfaces. For Kafka, you should rebalance partition replicas after scaling operations. Rebalancing partitions allows Kafka to take advantage of the new number of worker nodes.</p>
+<p>HDInsight Kafka does not support downward scaling or decreasing the number of brokers within a cluster. If an attempt is made to decrease the number of nodes, an <code>InvalidKafkaScaleDownRequestErrorCode</code> error is returned.</p>
+<p>For more information, see <a href="apache-kafka-high-availability" data-linktype="relative-path">High availability with Apache Kafka on HDInsight</a>.</p>
+</li>
+<li><p>Azure Monitor logs can be used to monitor Kafka on HDInsight. Azure Monitor logs surfaces virtual machine level information, such as disk and NIC metrics, and JMX metrics from Kafka.</p>
+<p>For more information, see <a href="apache-kafka-log-analytics-operations-management" data-linktype="relative-path">Analyze logs for Apache Kafka on HDInsight</a>.</p>
+</li>
+</ul>
+<h2 id="apache-kafka-on-hdinsight-architecture">Apache Kafka on HDInsight architecture</h2>
+<p>The following diagram shows a typical Kafka configuration that uses consumer groups, partitioning, and replication to offer parallel reading of events with fault tolerance:</p>
+<p><img src="media/apache-kafka-introduction/kafka-cluster-diagram.png" alt="Kafka cluster configuration diagram" data-linktype="relative-path">
+</p>
+<p>Apache ZooKeeper manages the state of the Kafka cluster. Zookeeper is built for concurrent, resilient, and low-latency transactions.</p>
+<p>Kafka stores records (data) in <strong>topics</strong>. Records are produced by <strong>producers</strong>, and consumed by <strong>consumers</strong>. Producers send records to Kafka <strong>brokers</strong>. Each worker node in your HDInsight cluster is a Kafka broker.</p>
+<p>Topics partition records across brokers. When consuming records, you can use up to one consumer per partition to achieve parallel processing of the data.</p>
+<p>Replication is employed to duplicate partitions across nodes, protecting against node (broker) outages. A partition denoted with an <em>(L)</em> in the diagram is the leader for the given partition. Producer traffic is routed to the leader of each node, using the state managed by ZooKeeper.</p>
+<h2 id="why-use-apache-kafka-on-hdinsight">Why use Apache Kafka on HDInsight?</h2>
+<p>The following are common tasks and patterns that can be performed using Kafka on HDInsight:</p>
+<table>
+<thead>
+<tr>
+<th>Use</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replication of Apache Kafka data</td>
+<td>Kafka provides the MirrorMaker utility, which replicates data between Kafka clusters. For information on using MirrorMaker, see <a href="apache-kafka-mirroring" data-linktype="relative-path">Replicate Apache Kafka topics with Apache Kafka on HDInsight</a>.</td>
+</tr>
+<tr>
+<td>Publish-subscribe messaging pattern</td>
+<td>Kafka provides a Producer API for publishing records to a Kafka topic. The Consumer API is used when subscribing to a topic. For more information, see <a href="apache-kafka-get-started" data-linktype="relative-path">Start with Apache Kafka on HDInsight</a>.</td>
+</tr>
+<tr>
+<td>Stream processing</td>
+<td>Kafka is often used with Apache Storm or Spark for real-time stream processing. Kafka 0.10.0.0 (HDInsight version 3.5 and 3.6) introduced a streaming API that allows you to build streaming solutions without requiring Storm or Spark. For more information, see <a href="apache-kafka-get-started" data-linktype="relative-path">Start with Apache Kafka on HDInsight</a>.</td>
+</tr>
+<tr>
+<td>Horizontal scale</td>
+<td>Kafka partitions streams across the nodes in the HDInsight cluster. Consumer processes can be associated with individual partitions to provide load balancing when consuming records. For more information, see <a href="apache-kafka-get-started" data-linktype="relative-path">Start with Apache Kafka on HDInsight</a>.</td>
+</tr>
+<tr>
+<td>In-order delivery</td>
+<td>Within each partition, records are stored in the stream in the order that they were received. By associating one consumer process per partition, you can guarantee that records are processed in-order. For more information, see <a href="apache-kafka-get-started" data-linktype="relative-path">Start with Apache Kafka on HDInsight</a>.</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>Since it supports the publish-subscribe message pattern, Kafka is often used as a message broker.</td>
+</tr>
+<tr>
+<td>Activity tracking</td>
+<td>Since Kafka provides in-order logging of records, it can be used to track and re-create activities. For example, user actions on a web site or within an application.</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Using stream processing, you can aggregate information from different streams to combine and centralize the information into operational data.</td>
+</tr>
+<tr>
+<td>Transformation</td>
+<td>Using stream processing, you can combine and enrich data from multiple input topics into one or more output topics.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="next-steps">Next steps</h2>
+<p>Use the following links to learn how to use Apache Kafka on HDInsight:</p>
+<ul>
+<li><p><a href="apache-kafka-get-started" data-linktype="relative-path">Quickstart: Create Apache Kafka on HDInsight</a></p>
+</li>
+<li><p><a href="rest-proxy" data-linktype="relative-path">Use Kafka with REST proxy</a></p>
+</li>
+<li><p><a href="../hdinsight-apache-spark-with-kafka" data-linktype="relative-path">Tutorial: Use Apache Spark with Apache Kafka on HDInsight</a></p>
+</li>
+<li><p><a href="../hdinsight-apache-storm-with-kafka" data-linktype="relative-path">Tutorial: Use Apache Storm with Apache Kafka on HDInsight</a></p>
+</li>
+</ul>
+
+							<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop border-top has-margin-top-large has-padding-top-large binary-rating-holder">
+									
+	
+	
+
+	<div class="feedback-verbatim border-bottom has-padding-bottom-large has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+				<h3 class="font-weight-semibold has-margin-top-none font-size-h4 margin-bottom-xs">Is this page helpful?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea border-none box-shadow-none has-inner-focus"></textarea>
+		    </div>
+			<p class="font-size-xs has-line-height-reset">Feedback will be sent to Microsoft: By pressing the submit button, your feedback will be used to improve Microsoft products and services. <a href="https://privacy.microsoft.com/en-us/privacystatement">Privacy policy.</a></p>
+            <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>									</div>
+						<!-- end page rating section -->
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations"></section>
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+<section class="feedback-section position-relative" data-bi-name="feedback-section">
+
+    <h2 id="feedback" class="title is-3 has-margin-top-large">Feedback</h2>
+
+    <div class="alert choose-feedback-type">
+        <p aria-hidden="true" id="send-feedback-about">Submit and view feedback for</p>
+
+        <div class="choose-feedback-buttons margin-top-xs">
+                <a class="button has-external-link-indicator feedback-type-product has-margin-bottom-small" aria-label="Send feedback about this product" href="https://feedback.azure.com/forums/217335-hdinsight" data-bi-name="product-feedback">
+                    <span>This product</span>
+                </a>
+
+			<a class="button feedback-type-product has-margin-bottom-small github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github">
+				<span aria-hidden="true" class="docon docon-brand-github has-padding-right-extra-small"></span>
+				<span>This page</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container display-flex justify-content-flex-end has-margin-top-small has-margin-bottom-small">
+        <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/azure-docs/issues">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>View all page feedback</span>
+        </a>
+    </div>
+</section>
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="border-top is-visible-interactive has-default-focus has-margin-top-large ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link flex-shrink-0" href="#" data-bi-name="select-locale"><span class="icon docon docon-world font-size-l has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2021</li>
+	</ul>
+</footer>
+						</div>
+					</div>
+					
+						<div class="font-size-s right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<div id="affixed-right-container" class="doc-outline position-fixed is-vertically-scrollable">
+									
+	
+	
+
+	<div class="feedback-verbatim border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+
+				<h3 class="font-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea border-none box-shadow-none has-inner-focus"></textarea>
+		    </div>
+			<p class="font-size-xs has-line-height-reset">Feedback will be sent to Microsoft: By pressing the submit button, your feedback will be used to improve Microsoft products and services. <a href="https://privacy.microsoft.com/en-us/privacystatement">Privacy policy.</a></p>
+            <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+									<h3>In this article</h3>
+								</nav>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive has-margin-top-large ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link flex-shrink-0" href="#" data-bi-name="select-locale"><span class="icon docon docon-world font-size-l has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2021</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
