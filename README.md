@@ -62,3 +62,23 @@ The books are organized into the following categories:
 ---
 
 Feel free to explore the collection and enhance your knowledge! 🎓
+
+
+## 📌 How to Use This Repository
+
+- Click on the book titles or links (where available) to access the resources.
+- Use this collection for **self-study**, **professional development**, or **personal reference**.
+
+---
+
+## 🎯 Contributing
+Have a great book to recommend? Feel free to create a **pull request** or open an **issue** to add it to this collection.
+
+---
+
+## 💬 Feedback
+If you have any suggestions or feedback, don't hesitate to [open an issue]([https://github.com/your-repo](https://github.com/fagun18/Books-Collection/issues). Your contributions are highly valued!
+
+---
+
+*Happy Learning! 🚀*
