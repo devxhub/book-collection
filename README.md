@@ -1,6 +1,8 @@
-# Books Collection 📚
+# 📚 Books Collection
 
 A curated collection of programming, software engineering, and system design books. This repository serves as a personal library to store and access important resources for learning and professional development.
+
+> **Disclaimer**: I am not the owner of any books listed here. These are collected solely for personal reading and educational purposes.
 
 ---
 
@@ -58,3 +60,5 @@ The books are organized into the following categories:
 - *Unit Testing Principles, Practices, and Patterns*
 
 ---
+
+Feel free to explore the collection and enhance your knowledge! 🎓
