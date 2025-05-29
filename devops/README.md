@@ -60,4 +60,4 @@ Welcome to the **DevOps** section! This category contains resources about DevOps
 Found a great DevOps resource or book? Contributions are welcome! Please create a pull request or open an issue.
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*

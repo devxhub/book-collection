@@ -79,4 +79,4 @@ Welcome to the **Web & Mobile Development** section! This category contains reso
 Found a great web or mobile development resource? Contributions are welcome! Please create a pull request or open an issue.
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*

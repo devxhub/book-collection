@@ -57,4 +57,4 @@ Welcome to the **Machine Learning** section! This category contains resources ab
 Found a great ML resource or book? Contributions are welcome! Please create a pull request or open an issue.
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*

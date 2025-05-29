@@ -51,4 +51,4 @@ Welcome to the **Databases** section! This category contains resources about dat
 Found a great database book or resource? Feel free to contribute by creating a pull request!
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*

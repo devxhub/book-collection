@@ -43,4 +43,4 @@ Welcome to the **Algorithms** section! This category contains resources that cov
 Found a great algorithms book or resource? Feel free to contribute by creating a pull request!
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*

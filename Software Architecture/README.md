@@ -56,4 +56,4 @@ Welcome to the **Software Architecture** section! This category contains resourc
 Found a great architecture book or resource? Feel free to contribute by creating a pull request!
 
 ---
-📅 *Last Updated: May 2024*
+📅 *Last Updated: May 2025*
