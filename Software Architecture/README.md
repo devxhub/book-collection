@@ -18,6 +18,12 @@ Welcome to the **Software Architecture** section! This category contains resourc
 - [Building Microservices, 2nd Edition](https://github.com/fagun18/Books-Collection/tree/main/Software%20Architecture/Microservices)
 - [Domain-Driven Design](https://github.com/fagun18/Books-Collection/tree/main/Software%20Architecture/DDD) - Eric Evans
 - [Designing Data-Intensive Applications](https://github.com/fagun18/Books-Collection/tree/main/Databases/Design) - Martin Kleppmann
+- A Philosophy of Software Design - John Ousterhout.pdf  
+  A modern take on software design principles, focusing on modularity and simplicity.
+- Fundamentals of Software Architecture.pdf  
+  Covers the foundational pillars and styles of software architecture.
+- Software Architecture - The Hardparts.pdf  
+  Explores the most challenging aspects of software architecture decision-making.
 
 ## 🏗️ Architecture Styles
 
@@ -56,4 +62,4 @@ Welcome to the **Software Architecture** section! This category contains resourc
 Found a great architecture book or resource? Feel free to contribute by creating a pull request!
 
 ---
-📅 *Last Updated: May 2025*
+📅 *Last Updated: July 2025*

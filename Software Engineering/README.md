@@ -18,6 +18,10 @@ Welcome to the **Software Engineering** section! This category covers the princi
 - [The Pragmatic Programmer](https://github.com/fagun18/Books-Collection/tree/main/Software%20Engineering) - Andrew Hunt & David Thomas
 - [Clean Code](https://github.com/fagun18/Books-Collection/tree/main/Software%20Engineering) - Robert C. Martin
 - [Design Patterns](https://github.com/fagun18/Books-Collection/tree/main/Software%20Engineering) - Gang of Four
+- Martin Fowler - Refactoring - Improving the Design of Existing Code.pdf  
+  A comprehensive guide to refactoring techniques for improving code maintainability.
+- kent-beck-test-driven-development-by-example.pdf  
+  The classic introduction to test-driven development (TDD) with practical examples.
 
 ## 🛠️ Key Practices
 
