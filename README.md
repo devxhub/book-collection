@@ -3,7 +3,7 @@
 -->
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/devxhub/books-collection/main/.github/banner.png" alt="Books Collection Banner" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 16px;"/>
+  <img src="Ultimate_Tech_Book_Collection_by_Devxhub.png" alt="Books Collection Banner" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 16px;"/>
   <h1>📚 <span style="color:#6C63FF;">Ultimate Tech Book Collection</span></h1>
   <p>
     <strong style="font-size:1.2em;">A meticulously curated collection of technical books covering programming, software engineering, system design, and more.</strong>
@@ -23,7 +23,15 @@
   <a href="https://www.linkedin.com/in/mejbaur/" target="_blank"><img src="https://img.shields.io/badge/Curator-Mejbaur%20Bahar%20Fagun-0A66C2?style=for-the-badge&logo=linkedin" alt="Mejbaur Bahar Fagun"></a>
 </div>
 
+---
 
+<div align="center">
+  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
+  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
+  <sub>Software Engineer in Test (II)</sub>
+</div>
+
+---
 
 ## ⚠️ Disclaimer
 This repository contains a collection of books for educational purposes only. We do not own the rights to these books. Please support the authors by purchasing the books if you find them valuable.
