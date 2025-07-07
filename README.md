@@ -3,7 +3,7 @@
 -->
 
 <div align="center">
-  <img src="Ultimate_Tech_Book_Collection_by_Devxhub.png" alt="Books Collection Banner" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 16px;"/>
+  <img src="Ultimate_Tech_Book_Collection_by_Devxhub.png" alt="Books Collection Banner" width="400" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 16px;"/>
   <h1>📚 <span style="color:#6C63FF;">Ultimate Tech Book Collection</span></h1>
   <p>
     <strong style="font-size:1.2em;">A meticulously curated collection of technical books covering programming, software engineering, system design, and more.</strong>
@@ -15,9 +15,9 @@
     <a href="#contributing">Contributing</a>
   </p>
   <br>
-  <img src="https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Repository%20Size&query=%24.size&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdevxhub%2Fbooks-collection" alt="Repository Size">
-  <img src="https://img.shields.io/github/last-commit/devxhub/books-collection?color=success" alt="Last Commit">
-  <img src="https://img.shields.io/github/license/devxhub/books-collection?color=blue" alt="License">
+  <img src="https://img.shields.io/github/repo-size/devxhub/books-collection?color=blueviolet&label=Repository%20Size&style=flat-square&logo=database" alt="Repository Size" title="Repository Size (in bytes)">
+  <img src="https://img.shields.io/github/last-commit/devxhub/books-collection?color=success&style=flat-square" alt="Last Commit">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="MIT License">
   <br><br>
   <a href="https://devxhub.com/" target="_blank"><img src="https://img.shields.io/badge/Owner-Devxhub-blue?style=for-the-badge&logo=github" alt="Devxhub"></a>
   <a href="https://www.linkedin.com/in/mejbaur/" target="_blank"><img src="https://img.shields.io/badge/Curator-Mejbaur%20Bahar%20Fagun-0A66C2?style=for-the-badge&logo=linkedin" alt="Mejbaur Bahar Fagun"></a>
@@ -27,7 +27,7 @@
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
