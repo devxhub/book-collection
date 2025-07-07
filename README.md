@@ -15,7 +15,7 @@
     <a href="#contributing">Contributing</a>
   </p>
   <br>
-  <img src="https://img.shields.io/github/repo-size/devxhub/books-collection?color=blueviolet&label=Repository%20Size" alt="Repository Size">
+  <img src="https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Repository%20Size&query=%24.size&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdevxhub%2Fbooks-collection" alt="Repository Size">
   <img src="https://img.shields.io/github/last-commit/devxhub/books-collection?color=success" alt="Last Commit">
   <img src="https://img.shields.io/github/license/devxhub/books-collection?color=blue" alt="License">
   <br><br>
@@ -25,11 +25,9 @@
 
 ---
 
-<div align="center">
-  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
-  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
-  <sub>Software Engineer in Test (II)</sub>
-</div>
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -186,12 +184,6 @@ Contributions are welcome! Here's how you can contribute:
 4. Submit a pull request
 
 Please ensure any books you add are legally shareable and properly attributed.
-
----
-
-## 📜 License
-
-This repository is for educational purposes only. All rights belong to their respective owners. If you are an author or publisher and would like any content removed, please open an issue.
 
 ---
 
