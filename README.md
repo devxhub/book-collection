@@ -1,11 +1,12 @@
 <!--
-  Professional README for Books-Collection
+  Modern & Advanced Professional README for Books-Collection
 -->
 
 <div align="center">
-  <h1>📚 Ultimate Tech Book Collection</h1>
+  <img src="https://raw.githubusercontent.com/devxhub/books-collection/main/.github/banner.png" alt="Books Collection Banner" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 16px;"/>
+  <h1>📚 <span style="color:#6C63FF;">Ultimate Tech Book Collection</span></h1>
   <p>
-    <strong>A meticulously curated collection of technical books covering programming, software engineering, system design, and more.</strong>
+    <strong style="font-size:1.2em;">A meticulously curated collection of technical books covering programming, software engineering, system design, and more.</strong>
   </p>
   <p>
     <a href="#categories">Categories</a> •
@@ -17,13 +18,16 @@
   <img src="https://img.shields.io/github/repo-size/devxhub/books-collection?color=blueviolet&label=Repository%20Size" alt="Repository Size">
   <img src="https://img.shields.io/github/last-commit/devxhub/books-collection?color=success" alt="Last Commit">
   <img src="https://img.shields.io/github/license/devxhub/books-collection?color=blue" alt="License">
+  <br><br>
+  <a href="https://devxhub.com/" target="_blank"><img src="https://img.shields.io/badge/Owner-Devxhub-blue?style=for-the-badge&logo=github" alt="Devxhub"></a>
+  <a href="https://www.linkedin.com/in/mejbaur/" target="_blank"><img src="https://img.shields.io/badge/Curator-Mejbaur%20Bahar%20Fagun-0A66C2?style=for-the-badge&logo=linkedin" alt="Mejbaur Bahar Fagun"></a>
 </div>
 
 ---
 
 <div align="center">
   <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
-  <b>All books provided by:</b> Mejbaur Bahar Fagun  
+  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
   <sub>Software Engineer in Test (II)</sub>
 </div>
 
@@ -193,6 +197,6 @@ This repository is for educational purposes only. All rights belong to their res
 
 <div align="center">
   <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
-  <b>All books provided by:</b> Mejbaur Bahar Fagun  
+  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
   <sub>Software Engineer in Test (II)</sub>
 </div>
