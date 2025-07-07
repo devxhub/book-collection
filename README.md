@@ -23,15 +23,7 @@
   <a href="https://www.linkedin.com/in/mejbaur/" target="_blank"><img src="https://img.shields.io/badge/Curator-Mejbaur%20Bahar%20Fagun-0A66C2?style=for-the-badge&logo=linkedin" alt="Mejbaur Bahar Fagun"></a>
 </div>
 
----
 
-<div align="center">
-  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
-  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
-  <sub>Software Engineer in Test (II)</sub>
-</div>
-
----
 
 ## ⚠️ Disclaimer
 This repository contains a collection of books for educational purposes only. We do not own the rights to these books. Please support the authors by purchasing the books if you find them valuable.
@@ -195,8 +187,3 @@ This repository is for educational purposes only. All rights belong to their res
 
 ---
 
-<div align="center">
-  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
-  <b>All books provided by:</b> <a href="https://www.linkedin.com/in/mejbaur/">Mejbaur Bahar Fagun</a>  
-  <sub>Software Engineer in Test (II)</sub>
-</div>
