@@ -1,24 +1,36 @@
+<!--
+  Professional README for Books-Collection
+-->
+
 <div align="center">
   <h1>📚 Ultimate Tech Book Collection</h1>
   <p>
-    A meticulously curated collection of technical books covering programming, software engineering, system design, and more.
+    <strong>A meticulously curated collection of technical books covering programming, software engineering, system design, and more.</strong>
   </p>
   <p>
-    <a href="#-categories">Categories</a> •
-    <a href="#-featured-books">Featured Books</a> •
-    <a href="#-how-to-use">How to Use</a> •
-    <a href="#-contributing">Contributing</a>
+    <a href="#categories">Categories</a> •
+    <a href="#featured-books">Featured Books</a> •
+    <a href="#how-to-use">How to Use</a> •
+    <a href="#contributing">Contributing</a>
   </p>
-  
-  <img src="https://img.shields.io/github/repo-size/fagun18/Books-Collection?color=blueviolet&label=Repository%20Size" alt="Repository Size">
-  <img src="https://img.shields.io/github/last-commit/fagun18/Books-Collection?color=success" alt="Last Commit">
-  <img src="https://img.shields.io/github/license/fagun18/Books-Collection?color=blue" alt="License">
+  <br>
+  <img src="https://img.shields.io/github/repo-size/devxhub/books-collection?color=blueviolet&label=Repository%20Size" alt="Repository Size">
+  <img src="https://img.shields.io/github/last-commit/devxhub/books-collection?color=success" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/devxhub/books-collection?color=blue" alt="License">
+</div>
+
+---
+
+<div align="center">
+  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
+  <b>All books provided by:</b> Mejbaur Bahar Fagun  
+  <sub>Software Engineer in Test (II)</sub>
 </div>
 
 ---
 
 ## ⚠️ Disclaimer
-This repository contains a collection of books for educational purposes only. I do not own the rights to these books. Please support the authors by purchasing the books if you find them valuable.
+This repository contains a collection of books for educational purposes only. We do not own the rights to these books. Please support the authors by purchasing the books if you find them valuable.
 
 ---
 
@@ -180,7 +192,7 @@ This repository is for educational purposes only. All rights belong to their res
 ---
 
 <div align="center">
-  Mejbaur Bahar Fagun
-  <br>
+  <b>Repository Owner:</b> <a href="https://devxhub.com/">Devxhub</a>  
+  <b>All books provided by:</b> Mejbaur Bahar Fagun  
   <sub>Software Engineer in Test (II)</sub>
 </div>
