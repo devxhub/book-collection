@@ -31,7 +31,7 @@
 - **Total Books**: 165+ PDF files
 - **Categories**: 20+ organized categories
 - **Featured Collection**: Complete "10 Books for Software Engineers" set
-- **Last Updated**: December 2024
+- **Last Updated**: October 2025
 
 ### 🏆 Essential Software Engineering Books (Complete Set)
 ✅ **All 10 Essential Books Included:**
